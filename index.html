@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thatix - Recipe Finder</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav><img src="./images/logo.png" alt="" /></nav>
+    <header>
+      <h1>
+        Search Your <br />
+        Favorite Recipe
+      </h1>
+      <p>
+        A handful of simple ingredients typify the fresh, vibrant <br />
+        flavors of Greek cooking
+      </p>
+    </header>
+
+    <div class="search-bar">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search..."
+        oninput="searchRecipes()"
+      />
+      <button onclick="searchRecipes()"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="recipes-container">
+      <h2>Latest Recipes</h2>
+      <div id="recipeLoader"><div></div></div>
+      <div class="recipe-grid" id="recipeGrid"></div>
+      <div id="noResults" class="no-results" style="display: none">
+        No recipes found.
+      </div>
+    </div>
+
+    <div class="popup" id="popup">
+      <div class="popup-content" id="popupContent">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <img id="popupImg" src="" alt="Recipe Image" />
+        <h3 id="popupTitle"></h3>
+        <p id="popupDesc"></p>
+      </div>
+    </div>
+
+    <button id="scrollTopBtn" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <footer>
+      <div>
+        <p>Copyright © <span id="year"></span> - All rights reserved</p>
+      </div>
+      <div class="social-media">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
